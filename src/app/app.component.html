@@ -1,0 +1,7 @@
+<h1>Life Cycle Hook Demo App</h1>
+<p>Check console for life cycle changes</p>
+<input type="text" #in (keyup)="update(in.value)" placeholder="Enter Something"/>
+&middot;
+<button (click)="removeHome()">Remove Home</button>
+<hr/>
+<app-home [my]="data" *ngIf="isHome">Hello Its Ng Content {{ in.value }}</app-home>
